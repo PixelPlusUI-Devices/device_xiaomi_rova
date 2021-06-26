@@ -225,6 +225,12 @@ on boot
     # Restore default I/O tuning
     write /sys/block/mmcblk0/queue/scheduler "bfq"
     write /sys/block/mmcblk0/queue/nr_requests 128
+    
+    # Enable qcrild and data services
+    enable vendor.qcrild
+    enable vendor.qcrild2
+    enable vendor.dataqti
+    enable vendor.dataadpl
 
 # msm specific files that need to be created on /data
 on post-fs-data
